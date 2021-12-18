@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+
+    <title>InstantCashEarn</title>
+    <meta name="clckd" content="a16d1aa4d1da4d020d2c1bdea11abe1e" />
+    <!--Bidvertiser2064037-->
+   <!-- Bidvertiser2064037 -->
+    <!-- font awesome cdn link  -->
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    {% load static %}
+    <meta name="propeller" content="039b68891eb7a9d722042fe5922164e3">
+    <script>(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),p.appendChild(s);})(document.createElement('script'),'https://iclickcdn.com/tag.min.js',4692402,document.body||document.documentElement)</script>
+       
+    <link rel = "icon" href = "{% static 'image/download.png'%}"
+        type = "image/x-icon">
+     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"-->
+     <!--   integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static 'css/styleee.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styleee1.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styleee2.css' %}">
+
+</head>
+
+<body id="twoo">
+    
+    <!-- <img class='gradient-background' src="{% static 'image/pexels-pixabay-315938.jpg'%}"> -->
+    <br>
+    <center>
+        <div>
+            {% for msg in messages %}
+            {{msg}}
+            {% endfor %}</div>
+    </center>
+
+    <!-- gradeint background  -->
+
+
+
+
+    <!-- header section starts  -->
+    <div class="gradient-background"></div>
+    <!-- <div class="gradient-background1"></div>
+    <div class="gradient-background2"></div>
+    <div class="gradient-background3"></div>
+    <div class="gradient-background4"></div>
+    <div class="gradient-background5"></div> -->
+    <header class="header">
+        <a href="#" class="logo"><i class="fas fa-hand-holding-usd "></i>ICE </a>
+
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#courses">Services</a>
+            <a href="{%  url 'daily-blogs' %}">Blogs</a>
+            <a href="{%  url 'about' %}">About Us</a>
+            <a href="{%  url 'privacy' %}">Privacy Policy</a>
+            <a href="{%  url 'contact' %}">contact</a>
+        </nav>
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+    </header>
+    <div class='ali'>
+        <div id="detect"></div>
+        <div class="wrapper">
+            <div class="content">
+                <div class="warn-icon">
+                    <span class="icon"><i class="fas fa-exclamation"></i></span>
+                </div>
+                <h2>AdBlock Detected!</h2>
+                <p>Our website is made possible by displaying ads to our visitors. Please supporting us by
+                    whitelisting our website.</p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <br><br><br><br>
+    <center>
+        <p class="animatetext">Instant Cash Earn</p>
+        <p class="gradienttext pe-3 ps-3">Finding ways to make money online</p></center>
+        
+    
+
+
+    <br><br><br>
+    <center>
+        <p class="herotext pt-5 pt-lg-0"> <b> Lets connect with Us <br> Join Today !!</b>
+        </p>
+
+        <a href="{% url 'signup-view' %}" rel="noopener" class="glassbutton me-lg-5" style="text-decoration: none;">SIGN
+            UP</a>
+        <a href="{% url 'login' %}" rel="noopener" class="glassbutton" style="text-decoration: none;">LOGIN</a>
+    </center>
+    <section class="home" id="home">
+
+        <div class="content">
+            <h3>Discover new ways of Earning</h3>
+            <p>Welcome to instantcashearn.com, your number one trusted site to earn money online. We're dedicated to
+                providing you the very best of digital marketing, Web development, and search engine optimization.
+                Services.....</p>
+            <a href="{% url 'about' %}" class="btn">read more</a>
+        </div>
+    </section>
+
+    <!-- home section ends -->
+    <br>
+    <!-- courses section starts  -->
+
+    <section class="courses" id="courses">
+
+        <h1 class="heading"> <span>our services</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="{% static 'image/course-1.svg' %}" alt="">
+                <h3>web designing</h3>
+                <p>Best Django , PHP and .Net Developers Team, dedicated to provide their best.</p>
+                <a href="{%  url 'about' %}" class="btn">read more</a>
+            </div>
+
+            <div class="box">
+                <img src="{% static 'image/course-2.svg' %}" alt="">
+                <h3>seo marketing</h3>
+                <p>Professional Team with best skills in SEO. </p>
+                <a href="{%  url 'about' %}" class="btn">read more</a>
+                <!-- <div class="icons">
+                    <a href="#"> <i class="fas fa-book"></i> 5 modules </a>
+                    <a href="#"> <i class="fas fa-clock"></i> 6 hours </a>
+                </div> -->
+            </div>
+
+
+            <div class="box">
+                <img src="{% static 'image/course-5.svg' %}" alt="">
+                <h3>Developing Earning Platforms</h3>
+                <p>Trusted Brand with aim to make every online earn money digitally</p>
+                <a href="{%  url 'about' %}" class="btn">read more</a>
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <!-- courses section ends -->
+
+    <!-- teachers section starts  -->
+    
+    <section class="teachers" id="teachers">
+
+        <h1 class="heading"> <span>our team</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="{% static 'image/teacher-2.webp' %}" alt="">
+                <h3>Syed Abdul Ali</h3>
+                <span>Developer</span>
+                <div class="share">
+                    <a href="{%  url 'contact' %}" class="fab fa-facebook-f"></a>
+                    <a href="{%  url 'contact' %}" class="fab fa-twitter"></a>
+                    <a href="{%  url 'contact' %}" class="fab fa-instagram"></a>
+                    <a href="{%  url 'contact' %}" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="{% static 'image/teacher-6.webp' %}" alt="">
+                <h3>Daniyal Aslam</h3>
+                <span>Team Lead</span>
+                <div class="share">
+                    <a href="{%  url 'contact' %}" class="fab fa-facebook-f"></a>
+                    <a href="{%  url 'contact' %}" class="fab fa-twitter"></a>
+                    <a href="{%  url 'contact' %}" class="fab fa-instagram"></a>
+                    <a href="{%  url 'contact' %}" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="{% static 'image/teacher-5.webp' %}" alt="">
+                <h3>Asad Raza and Shaheer</h3>
+                <span>Network Marketers</span>
+                <div class="share">
+                    <a href="{%  url 'contact' %}" class="fab fa-facebook-f"></a>
+                    <a href="{%  url 'contact' %}" class="fab fa-twitter"></a>
+                    <a href="{%  url 'contact' %}" class="fab fa-instagram"></a>
+                    <a href="{%  url 'contact' %}" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- teachers section ends -->
+
+    <!-- plan section starts  -->
+
+    <section class="plan" id="plan">
+
+        <h1 class="heading"> <span>our plans</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <i class="fas fa-paper-plane"></i>
+                <h3>basic plan</h3>
+                <ul>
+                    <li>Daily Blogs:Total 10</li>
+                    <li>Per Blog Price: 0.75Rs</li>
+                    <li>Withdraw limit: 250Rs</li>
+                    <li>Direct Referral Income: 9%</li>
+                    <li>Total Un-Direct Referral: 9</li>
+                    <li>Un-Direct Referral Income: 2.5%</li>
+                    <li>Package Life: 4Months</li>
+                    <li>24/7 support</li>
+                </ul>
+                <a href="{% url 'signup-view' %}"> choose plan</a>
+                <div class="price"> <span>Rs</span>250<span>/4mo</span> </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-plane"></i>
+                <h3>standard plan</h3>
+                <ul>
+                    <li>Daily blog:Total 10</li>
+                    <li>Per blog Price: 1.5Rs</li>
+                    <li>Withdraw limit: 500Rs</li>
+                    <li>Direct Referral Income: 9%</li>
+                    <li>Total Un-Direct Referral: 9</li>
+                    <li>Un-Direct Referral Income: 2.5%</li>
+                    <li>Package Life: 4Months</li>
+                    <li>24/7 support</li>
+                </ul>
+                <a href="{% url 'signup-view' %}"> choose plan</a>
+                <div class="price"> <span>Rs</span>500<span>/4mo</span> </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-rocket"></i>
+                <h3>premium plan</h3>
+                <ul>
+                    <li>Daily blogs:Total 10</li>
+                    <li>Per blogs Price: 3Rs</li>
+                    <li>Withdraw limit: 1000Rs</li>
+                    <li>Direct Referral Income: 9%</li>
+                    <li>Total Un-Direct Referral: 9</li>
+                    <li>Un-Direct Referral Income: 2.5%</li>
+                    <li>Package Life: 4Months</li>
+                    <li>24/7 support</li>
+                </ul>
+                <a href="{% url 'signup-view' %}"> choose plan</a>
+                <div class="price"> <span>Rs</span>1000<span>/4mo</span> </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- plan section ends -->
+
+    <!-- review section starts  -->
+
+    <section class="review" id="review">
+
+        <h1 class="heading"> <span>User's review</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <div class="image">
+                    <i class="fas fa-quote-left"></i>
+                    <i class="fas fa-user-tie fa-lg" style="font-size: 80px;"></i>
+                    <i class="fas fa-quote-right"></i>
+                </div>
+                <br>
+                <h3>Zeeshan</h3>
+                <span>happy customer</span>
+                <p>This Platform has helped me to earn money online</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <i class="fas fa-quote-left"></i>
+                    <i class="fas fa-user-tie fa-lg" style="font-size: 80px;"></i>
+                    <i class="fas fa-quote-right"></i>
+                </div>
+                <br>
+                <h3>Usman</h3>
+                <span>happy customer</span>
+                <p>This platform is best to earn money online</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <i class="fas fa-quote-left"></i>
+                    <i class="fas fa-user-tie fa-lg" style="font-size: 80px;"></i>
+                    <i class="fas fa-quote-right"></i>
+                </div>
+                <br>
+                <h3>Shaheer Ali</h3>
+                <span>happy customer</span>
+                <p>Best forum to earn money online..</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </section>
+
+    <!-- review section ends -->
+
+    <!-- contact section starts  -->
+     <h1 class="heading"> <span>Contact Members</span><br>
+     Asad:+92 323 2096077 <br>Shaheer:+92 340 0261977 </h1>
+     
+
+    <section class="contact" id="contact">
+
+        <h1 class="heading"> <span>contact us</span> </h1>
+
+        <form action="">
+
+            <input type="text" placeholder="your name" class="box">
+            <input type="email" placeholder="your email" class="box">
+            <input type="number" placeholder="your number" class="box">
+
+            <textarea name="" class="box" placeholder="your message" id="" cols="30" rows="10"></textarea>
+
+            <input type="submit" value="send message" class="btn">
+
+        </form>
+
+    </section>
+
+    <!-- contact section ends -->
+
+    <!-- footer section starts  -->
+
+    <section class="footer">
+
+        <div class="share">
+            <a class="fab fa-facebook-f"></a>
+            <a class="fab fa-twitter"></a>
+            <a class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+            <a href="#" class="fab fa-pinterest"></a>
+        </div>
+
+        <div class="credit"> created by <span>InstantCashEarn.com</span> | all rights reserved </div>
+
+    </section>
+
+    <!-- footer section ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {%load static%}
+    <!-- custom javascript file link  -->
+    <script src="{% static 'js/scripts.js' %}"></script>
+    <script src="{% static 'js/adb.js' %}"></script>
+    <!--<script type='text/javascript' src='//pl16800461.effectivegatetocontent.com/c9/ca/1b/c9ca1bd66721c17e39ba20a06e0c083c.js'></script>-->
+    
+</body>
+
+
+</html>

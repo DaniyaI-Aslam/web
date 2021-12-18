@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styleee.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    
+
+    <style>
+        .selectbox {
+            width: 300px;
+            position: relative;
+        }
+
+        .selectbox select {
+            height: 42px;
+            padding: 10px 15px;
+            line-height: 18px;
+            font-size: 16px;
+            width: 100%;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            -webkit-appearance: none;
+            appearance: none;
+
+        }
+
+        .selectbox :after {
+            content: '';
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            margin-top: -4px;
+            border-top: 8px solid transparent;
+            border-left: 6px solid #ccc;
+            pointer-events: none;
+        }
+
+        section .inputBx input[type="submit"] {
+            background: purple;
+            color: #fff;
+            outline: none;
+            border: none;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        section .inputBx input[type="submit"]:hover {
+            background: purple;
+        }
+
+        section .contentBx .formBx .inputBx {
+            margin-bottom: 20px;
+        }
+
+        section .contentBx .formBx .inputBx span {
+            font-size: 16px;
+            margin-bottom: 5px;
+            display: inline-block;
+            color: #607d8b;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+
+<body> <div class="gradient-background"></div>
+    <header class="header">
+
+        <a href="{% url 'main-view' %}"><div style="border-radius: 50% ;padding: 5px 5px 5px 5px;"><i class="fas fa-arrow-left fa-3x"
+                ></i></div></a>
+
+
+    </header><br><br><br><br><br><br><br><br>
+    
+    {%if flag %}
+
+
+
+
+    
+    <h1 class="heading"> <span style="color: black">Your package is {{p}}</span> </h1> 
+
+    {%else%}
+    <h1 class="heading" style='color:white; font-size:30px;'> <span>Deposit On</span><br>Account Holder Name:Mohammad Aslam <br>Jazzcash: +923032471641 <br><br>Account Holder Name:Daniyal Aslam <br>Easypaisa: +923222407374  <br><br>Account Holder Name:Muhammad Inam Ur Raza <br>Easypaisa: +923070657703 <br><br>Account Holder Name:Muhammad Shahid Ansari <br>Easypaisa: +923400261977 </h1>
+    <section>
+
+        <section class="contact" id="contact">
+
+
+            <form method="post">
+
+                {%csrf_token%}
+                {% for msg in messages %}
+                {{msg}}{% endfor %}
+                {% if error_message %}
+                <h1 class="heading"> <span style="color: black">{{error_message}}</span>
+                    {% endif %}</h1>
+                <div><br>
+                    <div class="inputBx">
+                        <span style="color: black ;font-size: 30px;">Select Package:</span>
+                        <br><br>
+                        <span class="selectbox">
+                            <select name="dropdown">
+                                <option selected="selectBox" disabled>Select package amount:</option>
+                                <option value="1000">1000</option>
+                                <option value="500">500</option>
+                                <option value="250">250</option>
+                            </select>
+                        </span>
+                        <span style="color: black ;font-size: 30px;">Select payment method:</span>
+                        <br><br>
+                        <span class="selectbox">
+                            <select name="dropd">
+                                <option selected="selected" disabled>Select payment method:</option>
+                                <option value=”easypaisa”>easypaisa</option>
+                                <option value=”jazzcash”>jazzcash </option>
+                            </select>
+                        </span>
+                        <span style="color: black ;font-size: 30px;">Enter TID:</span>
+                        <div class="inputBx">
+
+                            <input type="number" name="tid" id="tid"
+                                style="width: 100%; padding: 10px 60px; border-radius: 8px;"><br><br>
+                        </div>
+
+
+                    </div>
+                    <div class="formBx">
+                        <div class="inputBx">
+                            <div class="inputBx"> <span><input type="submit" value="submit"
+                                        style="padding: 10px 60px; border-radius: 8px;"></span>
+                            </div>
+
+                        </div>
+
+                    </div>
+            </form>
+        </section>
+        </div>
+        </div>
+    </section>
+    {%endif%}
+    
+    
+</body>
+
+</html>

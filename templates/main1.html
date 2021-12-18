@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        {% load static %}
+        <meta name="propeller" content="039b68891eb7a9d722042fe5922164e3">
+        <script>(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),p.appendChild(s);})(document.createElement('script'),'https://iclickcdn.com/tag.min.js',4692402,document.body||document.documentElement)</script>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/styleali.css' %}">
+        <meta name="propeller" content="039b68891eb7a9d722042fe5922164e3">
+        <link rel="stylesheet" href="{% static 'css/styleee1.css' %}">
+        <title>Dashboard</title>
+        <link rel = "icon" href = "{% static 'image/download.png'%}"
+        type = "image/x-icon">
+    </head>
+<body id="twoo">
+        <div id="detect"></div>
+        <div class="wrapper">
+            <div class="content">
+                <div class="warn-icon">
+                    <span class="icon"><i class="fas fa-exclamation"></i></span>
+                </div>
+                <h2>AdBlock Detected!</h2>
+                <p>Our website is made possible by displaying ads to our visitors. Please supporting us by
+                    whitelisting our website.</p>
+            </div>
+
+    </div>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    
+                    <a href="#" class="logo"><i class="fas fa-hand-holding-usd fa-2x"></i> </a>
+                    <h2>ICE <span class="danger" > family </span></h2>
+                </div>
+                <div class="close" id='close-btn'>
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="#" class="active">
+                    <span class="material-icons-sharp">grid_view</span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="{% url 'make-deposit' %}" >
+                    <span class="material-icons-sharp">credit_card</span>
+                    <h3>Deposit</h3>
+                </a>
+                <a href="{% url 'withdraw' %}">
+                    <span class="material-icons-sharp">attach_money</span>
+                    <h3>Withdraw</h3>
+                </a>
+                <a href="{% url 'daily-blogs' %}">
+                    <span class="material-icons-sharp">play_circle_filled</span>
+                    <h3>Daily Blogs</h3>
+                </a>
+                <a href="{% url 'my-recs-views' %}">
+                    <span class="material-icons-sharp">people</span>
+                    <h3>My Recommends </h3>
+                </a>
+                <a href="{% url 'recommend' %}">
+                    <span class="material-icons-sharp">person_add</span>
+                    <h3>Recommend Now </h3>
+                </a>
+                <a href="{% url 'logout' %}">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of side bar -->
+        <main>
+            <h1>Dashboard</h1>
+            <div class="date">
+                {{strfget}}
+            </div><br><br>
+            {% if pack %}
+            <div class="date">
+                Package is Active
+            </div><br>
+            
+            {% else %}
+            <div class="date">
+                Package is not Active
+            </div><br>
+            {% endif %}
+            <div class="insights">
+                <div class="sales">
+                    <span class="material-icons-sharp">analytics</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Total Earning</h3>
+                            <h1>{{total}}RS</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx='38' cy='38' r='36' ></circle>
+                            </svg>
+                            
+                        </div>
+                    </div>
+                    <small class="text-muted">Last 24 HOurs</small>
+                </div>
+                <!-- End Of Sales -->
+                
+                <div class="expenses">
+                    <span class="material-icons-sharp">bar_chart</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Referal Earning</h3>
+                            <h1>{{referEarn}}RS</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx='38' cy='38' r='36' ></circle>
+                            </svg>
+                            
+                        </div>
+                    </div>
+                    <small class="text-muted">Last 24 HOurs</small>
+                </div>
+                <!-- End Of Expensive -->
+                <div class="income">
+                    <span class="material-icons-sharp">stacked_line_chart</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>ADD Earn</h3>
+                            <h1>{{addEarn}}RS</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx='38' cy='38' r='36' ></circle>
+                            </svg>
+                            
+                        </div>
+                    </div>
+                    <small class="text-muted">Last 24 HOurs</small>
+                </div>
+                
+                <!-- End Of Income -->
+                
+            </div>
+            
+            <!-- End of insight -->
+            <div class="recent-orders">
+                
+                <h2>Recent Referals</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            {% comment %} <th>Payment Status</th> {% endcomment %}
+                            <th>Package Active</th>
+                            <th>Package price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{userName1}}</td>
+                            {% comment %} <td>85631</td> {% endcomment %}
+                            {% comment %} <td>DUe</td> {% endcomment %}
+                            <td class="warning" >{{packagee1}}</td>
+                            <td class="primary" >{{pricee1}}</td>
+                        </tr>
+                        <tr>
+                            <td>{{userName2}}</td>
+                            {% comment %} <td>85631</td> {% endcomment %}
+                            {% comment %} <td>DUe</td> {% endcomment %}
+                            <td class="warning" >{{packagee2}}</td>
+                            <td class="primary" >{{pricee2}}</td>
+                        </tr>
+                        <tr>
+                            <td>{{userName3}}</td>
+                            {% comment %} <td>85631</td> {% endcomment %}
+                            {% comment %} <td>DUe</td> {% endcomment %}
+                            <td class="warning" >{{packagee3}}</td>
+                            <td class="primary" >{{pricee3}}</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                <a href="{% url 'my-recs-views' %}">Show All</a>
+            </div>
+        </main>
+        <!-- ##############End Of main################ -->
+        <div  class="right">
+            <div class="top">
+                
+                <button id="menu-btn"> <span class="material-icons-sharp">menu</span> </button>
+                <div class="theme-toggler">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+                
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, {{getUser}}</p>
+                    </div>
+                    <span class="material-icons-sharp" style="margin-right: 3.5rem;">
+                        account_circle
+                        </span>
+                </div>
+            </div>
+            <div class="insightss">
+                 
+                <!-- End Of Sales -->
+                
+            </div>
+
+        </div>
+        
+        
+    </div>
+    {%load static%}
+<!-- custom javascript file link  -->
+<script src="{% static 'js/index.js' %}"></script>
+<script src="{% static 'js/adb.js' %}"></script>
+    <!-- <script src="./index.js"></script> -->
+      
+</body>
+</html>

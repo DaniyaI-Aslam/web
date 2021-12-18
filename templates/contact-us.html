@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us-InstantCashEarn.com</title>
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styleee.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styleee1.css' %}">
+    <link rel = "icon" href = "{% static 'image/download.png'%}"
+        type = "image/x-icon">
+        <script>(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),p.appendChild(s);})(document.createElement('script'),'https://iclickcdn.com/tag.min.js',4692402,document.body||document.documentElement)</script>
+</head>
+<body>
+    <div class="gradient-background"></div>
+    <header class="header">
+
+        <a href="{% url 'main-view' %}" class="logo"><i class="fas fa-hand-holding-usd "></i>ICE </a>
+
+        <nav class="navbar">
+            <a href="{% url 'main-view' %}">home</a>
+            <a href="{%  url 'about' %}">About Us</a>
+            <a href="{%  url 'privacy' %}">Privacy Policy</a>
+            <a href="{%  url 'terms-and-conditons' %}">Terms and conditon</a>
+            <a href="{%  url 'contact' %}">contact</a>
+        </nav>
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+    </header>
+    <br><br><br><br><br><br>
+    <div class='ali'>
+        <div id="detect"></div>
+        <div class="wrapper">
+            <div class="content">
+                <div class="warn-icon">
+                    <span class="icon"><i class="fas fa-exclamation"></i></span>
+                </div>
+                <h2>AdBlock Detected!</h2>
+                <p>Our website is made possible by displaying ads to our visitors. Please supporting us by
+                    whitelisting our website.</p>
+            </div>
+        </div>
+
+    </div>
+    <section class="contact" id="contact">
+
+        <h1 class="heading"> <span>contact us</span> </h1>
+
+        <form action="">
+
+            <input type="text" placeholder="your name" class="box">
+            <input type="email" placeholder="your email" class="box">
+            <input type="number" placeholder="your number" class="box">
+
+            <textarea name="" class="box" placeholder="your message" id="" cols="30" rows="10"></textarea>
+
+            <input type="submit" value="send message" class="btn">
+
+        </form>
+
+    </section>
+    
+    <script> 
+        const detect = document.querySelector("#detect");
+        const wrapper = document.querySelector(".wrapper");
+        const button = wrapper.querySelector("button");
+        let adClasses = ["ad", "ads", "adsbox", "doubleclick", "ad-placement", "ad-placeholder", "adbadge", "BannerAd"];
+        for (let item of adClasses) {
+            detect.classList.add(item);
+        }
+        let getProperty = window.getComputedStyle(detect).getPropertyValue("display");
+        if (!wrapper.classList.contains("show")) {
+            getProperty == "none" ? wrapper.classList.add("show") : wrapper.classList.remove("show");
+        }
+        button.addEventListener("click", () => {
+            wrapper.classList.remove("show");
+        });
+                 </script>
+
+<script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>

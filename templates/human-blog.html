@@ -1,0 +1,182 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>what if humans were twice as intelligent ?</title>
+    <!-- font awesome icons cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+
+    <!-- swiper slider css file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.css"
+        integrity="sha512-m3pAvNriL711NMlhkZHK6K4Tu2/RjtrzyjxZU8mlAbxxoDoURy27KajN1LGTLeEEPvaN12mKAgSCrYEwF9y0jA=="
+        crossorigin="anonymous" />
+
+    <!-- custom style.css file -->
+    {% load static %}
+    <link rel = "icon" href = "{% static 'image/download.png'%}"
+        type = "image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/daily.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styleee1.css' %}">
+     <!--aaa-->
+ <script>(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),p.appendChild(s);})(document.createElement('script'),'https://iclickcdn.com/tag.min.js',4692402,document.body||document.documentElement)</script>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="header" class="shadow bg-light">
+        <nav class="container navbar">
+            <a href="{%url 'main-view' %}" class="nav-brand text-dark">
+                ICE
+            </a>
+
+            <!-- toggle button -->
+            <button class="toggle-button">
+                <span><i class="fas fa-bars"></i></span>
+            </button>
+
+            <!-- collapse on toggle button click -->
+            <div class="collapse">
+                <ul class="navbar-nav">
+                    <a href="{% url 'main-view' %}" class="nav-link">Home</a>
+                    <a href="{% url 'daily-blogs' %}" class="nav-link">Blog</a>
+                    <!-- <a href="#" class="nav-link">Pages</a> -->
+                    <a href="{% url 'about' %}" class="nav-link">About</a>
+                    <a href="{% url 'contact' %}" class="nav-link">Contact</a>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+    <div class='ali'>
+        <div id="detect"></div>
+        <div class="wrapper">
+            <div class="content">
+                <div class="warn-icon">
+                    <span class="icon"><i class="fas fa-exclamation"></i></span>
+                </div>
+                <h2>AdBlock Detected!</h2>
+                <p>Our website is made possible by displaying ads to our visitors. Please supporting us by
+                    whitelisting our website.</p>
+            </div>
+        </div>
+
+    </div>
+    <!-- .Header -->
+
+    <!-- Main Site -->
+    {% if ads %}
+
+    <main id="site-main">
+
+        <!-- Post Content -->
+        <section class="container">
+            
+            <article id="post">
+                <!-- article heading -->
+                <div class="headings text-center">
+                    <div class="category">
+                        <a href="#" class="nav-link"></a>
+                    </div>
+
+                    <div class="title">
+                        <h2 class="text-title text-dark display-1">4 Minutes To Start Your Day Right</h2>
+                    </div>
+
+
+                </div>
+
+                <!-- thumbnail  -->
+                <div class="thumbnail mt-3">
+                    {% load static %}
+                    <img src="{% static 'image/human-blog.jpg' %}" class="thumbnail" alt="">
+                </div>
+
+                <!-- content -->
+                <div class="content text-dark display-2 secondary-title mt-3">
+                    <p>Currently, the average IQ of people is 100. If humans had an average IQ of 200, many things would change. With more intelligence, we could also live longer. It has been found, people with 115 IQ live longer than with 100 IQ. Being twice as intelligent will create a lot of opportunities.</p>
+                    <center><img src="{% static 'image/feel-me-think-about-it.gif' %}" alt=""></center>
+                    <p>if everyone on the earth is a genius the number of people with bachelors degrees and PHDs would also increase substantially</p>
+                    <center><img src="{% static 'image/smart-hangover.gif' %}" alt=""></center>
+                    <p>Each one of us would read more often with an IQ of 200, you could learn any language in a matter of weeks we could also pursue pretty much any career we wanted there would be far more brain surgeons, and astrophysicists. Perhaps if more of us were geniuses, people would earn more money across the board we would be far more advanced when it comes to space travel because the more intelligent</p> 
+                    <center><img src="{% static 'image/disney-moana.gif' %}" alt="" height="200px" width="300px"></center>
+                </div>
+            </article>
+            
+            <center>
+            <form action="" method="post">{% csrf_token %}
+                <h1 style="font-size: 20px;">00:00</h1>
+                <div class="contai"></div>
+                <p style="font-size: 20px;"></p>
+            </form>
+            <h4>You Have {{rem_adds}} adds remaining</h4>
+            </center>
+        </section>
+    </main>
+
+    {%else%}
+    <main id="site-main">
+
+        <!-- Post Content -->
+        <section class="container">
+            <article id="post">
+                <!-- article heading -->
+                <div class="headings text-center">
+                    <div class="category">
+                        <a href="#" class="nav-link"></a>
+                    </div>
+
+                    <div class="title">
+                        <h2 class="text-title text-dark display-1">4 Minutes To Start Your Day Right</h2>
+                    </div>
+
+
+                </div>
+
+                <!-- thumbnail  -->
+                <div class="thumbnail mt-3">
+                    {% load static %}
+                    <img src="{% static 'image/human-blog.jpg' %}" class="thumbnail" alt="">
+                </div>
+
+                <!-- content -->
+                <div class="content text-dark display-2 secondary-title mt-3">
+                    <p>Currently, the average IQ of people is 100. If humans had an average IQ of 200, many things would change. With more intelligence, we could also live longer. It has been found, people with 115 IQ live longer than with 100 IQ. Being twice as intelligent will create a lot of opportunities.</p>
+                    <center><img src="{% static 'image/feel-me-think-about-it.gif' %}" alt=""></center>
+                    <p>if everyone on the earth is a genius the number of people with bachelors degrees and PHDs would also increase substantially</p>
+                    <center><img src="{% static 'image/smart-hangover.gif' %}" alt=""></center>
+                    <p>Each one of us would read more often with an IQ of 200, you could learn any language in a matter of weeks we could also pursue pretty much any career we wanted there would be far more brain surgeons, and astrophysicists. Perhaps if more of us were geniuses, people would earn more money across the board we would be far more advanced when it comes to space travel because the more intelligent</p> 
+                    <center><img src="{% static 'image/disney-moana.gif' %}" alt="" height="200px" width="300px"></center>
+                </div>
+            </article>
+        </section>
+        
+    </main>
+    {%endif%}
+    
+            <!-- masonry libray for horizontal grid -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"
+                integrity="sha512-JRlcvSZAXT8+5SQQAvklXGJuxXTouyq8oIMaYERZQasB8SBDHZaUbeASsJWpk0UUrf89DP3/aefPPrlMR1h1yQ=="
+                crossorigin="anonymous"></script>
+
+            <!-- swiper slider cdn -->
+            {% comment %} <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.js"
+                integrity="sha512-1LlEYE0qExJ/GUfAJ0k2K2fB5sIvMv/q6ueo3syohvQ3ElWDQVSMUOf39cxaDWHtNu7M6lF6ZC1H6A1m3SvheA=="
+                crossorigin="anonymous"></script> {% endcomment %}
+
+            <!-- custom javascript main.js file -->
+            {% load static %}
+            <script src="{% static 'js/main.js' %}"></script>
+            {%load static%}
+            <script src="{% static 'js/newfile.js' %}"></script>
+</body>
+
+</html>

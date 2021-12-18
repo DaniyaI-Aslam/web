@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap'); 
+.wrapper{
+  position: fixed;
+  max-width: 480px;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  padding: 40px 30px;
+  background: rgb(255, 255, 255);
+  border-radius: 15px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(1.2);
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.06);
+  transition: opacity 0.2s 0s ease-in-out,
+              transform 0.2s 0s ease-in-out;
+  z-index: 9999;
+}
+.wrapper.show{
+  opacity: 1;
+  pointer-events: auto;
+  transform:translate(-50%, -50%) scale(1);
+}
+.wrapper .content,
+.content .warn-icon,
+.warn-icon .icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper .content{
+  flex-direction: column;
+}
+.content .warn-icon{
+  height: 115px;
+  width: 115px;
+  border-radius: 50%;
+  background: linear-gradient(#9b27ca 0%, #9927cf 0%, #d33639 100%, #f92121 100%);
+}
+.warn-icon .icon{
+  height: 100px;
+  width: 100px;
+  background: #fff;
+  border-radius: inherit;
+}
+.warn-icon .icon i{
+  background: linear-gradient(#9b27ca 0%, #9927cf 0%, #d33639 100%, #f92121 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 50px;
+}
+.content h2{
+  margin-top: 35px;
+  font-size: 32px;
+}
+.content p{
+  font-size: 19px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+.ali{
+  position: sticky;
+  padding: 20px;
+  z-index: 6;
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+   color: black; 
+}

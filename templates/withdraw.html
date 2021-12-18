@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Withdraw</title>
+    {% load static %}
+    <link rel = "icon" href = "{% static 'image/download.png'%}"
+        type = "image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/styleee.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <script>(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),p.appendChild(s);})(document.createElement('script'),'https://iclickcdn.com/tag.min.js',4692402,document.body||document.documentElement)</script>
+
+    <style>
+        .selectbox {
+            width: 300px;
+            position: relative;
+        }
+
+        .selectbox select {
+            height: 42px;
+            padding: 10px 15px;
+            line-height: 18px;
+            font-size: 16px;
+            width: 100%;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            -webkit-appearance: none;
+            appearance: none;
+
+        }
+
+        .selectbox :after {
+            content: '';
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            margin-top: -4px;
+            border-top: 8px solid transparent;
+            border-left: 6px solid #ccc;
+            pointer-events: none;
+        }
+
+        section .inputBx input[type="submit"] {
+            background: purple;
+            color: #fff;
+            outline: none;
+            border: none;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        section .inputBx input[type="submit"]:hover {
+            background: purple;
+        }
+
+        section .contentBx .formBx .inputBx {
+            margin-bottom: 20px;
+        }
+
+        section .contentBx .formBx .inputBx span {
+            font-size: 16px;
+            margin-bottom: 5px;
+            display: inline-block;
+            color: #607d8b;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gradient-background"></div>
+        <header class="header">
+
+            <a href="{% url 'main-view' %}">
+                <i class="fas fa-arrow-left fa-3x"></i>
+            </a>
+
+
+        </header>
+    <br><br><br><br><br><br><br><br>
+
+    {%if flag %}
+    <section>
+
+        <h1 class="heading"> <span style="color: black">Withdraw</span> </h1>
+
+        <section class="contact" id="contact">
+
+
+            <form method="post">
+
+                {%csrf_token%}
+                {% for msg in messages %}
+                <h1 class="heading"> <span style="color: black;">{{msg}}{% endfor %}</span></h1>
+                {% if error_message %}
+                <h1 class="heading"> <span style="color: black;">{{error_message}}</span>
+                    {% endif %}</h1>
+                <div><br>
+                    <div class="inputBx">
+                        <span style="color: black ;font-size: 30px;">Your Total amount is {{total}}</span>
+                        <br><br>
+
+                        <span style="color: black ;font-size: 20px;">Select payment method:</span>
+                        <br><br>
+                        <span class="selectbox">
+                            <select name="dropd" required>
+                                <option selected="selected" disabled>Select payment method:</option>
+                                <option value=”easypaisa”>easypaisa</option>
+                                <option value=”jazzcash”>jazzcash </option>
+                            </select>
+                        </span>
+                        <span style="color: black ;font-size: 20px;">Acount Holder Name</span>
+                        <div class="inputBx">
+
+                            <input type="text" name="name" id='name' required
+                                style="width: 100%; padding: 10px 60px; border-radius: 8px;"><br><br>
+                        </div>
+
+
+                    </div>
+                    <span style="color: black ;font-size: 20px;">Acount Number</span>
+                    <div class="inputBx">
+
+                        <input type="number" name="number" id='number'
+                            style="width: 100%; padding: 10px 60px; border-radius: 8px;" required><br><br>
+                    </div>
+
+
+                </div>
+                <div class="formBx">
+                    <div class="inputBx">
+                        <div class="inputBx"> <span><input type="submit" value="submit"
+                                    style="padding: 10px 60px; border-radius: 8px;"></span>
+                        </div>
+
+                    </div>
+
+                </div>
+                <h1 style="font-size: 25px;">10% FEES WILL BE DEDUCTED</h1>
+            </form>
+        </section>
+        
+        </div>
+        </div>
+    </section>
+
+    {%else%}
+    <center><h1 style="color: white;"> your package is {{price}} and your balance is less than {{price}} i.e {{total}}</h1></center>
+
+
+    {%endif%}
+</body>
+
+</html>

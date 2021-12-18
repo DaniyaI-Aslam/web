@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup-Instantcashearn</title>
+    {% load static %}
+    <link rel = "icon" href = "{% static 'image/download.png'%}"
+        type = "image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        section {
+            position: relative;
+            width: 100%;
+            height: 130vh;
+            display: flex;
+        }
+
+        section .imgBx {
+            position: relative;
+            width: 50%;
+            height: 100%;
+        }
+
+        section .imgBx:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(225deg, purple, #03a9f4);
+            z-index: 1;
+            mix-blend-mode: screen;
+        }
+
+        section .imgBx img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        section .contentBx {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: 100%;
+        }
+
+        section .contentBx .formBx {
+            width: 50%;
+        }
+
+        section .contentBx .formBx h2 {
+            color: #607d8b;
+            font-weight: 600;
+            font-size: 1.5em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            border-bottom: 4px solid purple;
+            display: inline-block;
+            letter-spacing: 1px;
+        }
+
+        section .contentBx .formBx .inputBx {
+            margin-bottom: 20px;
+        }
+
+        section .contentBx .formBx .inputBx span {
+            font-size: 16px;
+            margin-bottom: 5px;
+            display: inline-block;
+            color: #607d8b;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        section .contentBx .formBx .inputBx input {
+            width: 100%;
+            padding: 10px 20px;
+            outline: none;
+            font-weight: 380;
+            border: 1px solid #607d8b;
+            font-size: 14px;
+            color: #607d8b;
+            background: transparent;
+            border-radius: 30px;
+            margin-left: 10px;
+        }
+
+        button.btn.btn-primary {
+            background: purple;
+            color: #fff;
+            outline: none;
+            border: none;
+            font-weight: 500;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        button.btn.btn-primary:hover {
+            background: purple;
+            margin-bottom: 20px;
+        }
+
+        section .contentBx .formBx .remember {
+            margin-bottom: 10px;
+            color: #607d8b;
+            font-weight: 400;
+            font-size: 14px;
+        }
+
+        section .contentBx .formBx .inputBx p {
+            color: #607b8d;
+        }
+
+        section .contentBx .formBx .inputBx p a {
+            color: purple;
+        }
+
+        section .contentBx .formBx h3 {
+            color: #607b8d;
+            text-align: center;
+            margin: 80px 0 10px;
+            font-weight: 500;
+        }
+
+        section .contentBx .formBx .sci {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section .contentBx .formBx .sci li {
+            list-style: none;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #607d8b;
+            border-radius: 50%;
+            margin: 0 7px;
+            cursor: pointer;
+        }
+
+        section .contentBx .formBx .sci li:hover {
+            background: purple;
+        }
+
+        section .contentBx .formBx .sci li img {
+            transform: scale(.5);
+            filter: invert(1);
+        }
+
+        section .contentBx .formBx .sci li:hover {
+            background: purple;
+        }
+
+        section .contentBx .formBx .sci li img {
+            transform: scale(.2);
+            filter: invert(1);
+        }
+
+        @media (max-width: 768px) {
+            section .imgBx {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            section .contentBx {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }
+
+            section .contentBx .formBx {
+                width: 100%;
+                padding: 40px;
+                background: rgb(255 255 255 / 0.5);
+                margin: 20px;
+            }
+
+            section .contentBx .formBx h3 {
+                color: #607d8b;
+                text-align: center;
+                margin: 30px 0 10px;
+                font-weight: 500;
+            }
+        }
+
+        /* .helptext {
+            display: none;
+        } */
+
+        /* ul {
+            display: none;
+        } */
+
+        section .contentBx .formBx .inputBx input[type="submit"]:hover {
+            background: purple;
+        }
+
+        section .contentBx .formBx .inputBx input[type="submit"] {
+            background: purple;
+            color: #fff;
+            outline: none;
+            border: none;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .tan {
+            margin-right: 10px;
+            color: #607d8b;
+            ;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="imgBx">
+            <img src="https://cdn.pixabay.com/photo/2021/06/30/06/37/mountains-6376016__340.jpg">
+        </div>
+
+        <div class="contentBx">
+            <div class="formBx">
+                <h2>Signup</h2>
+                
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    
+                    {% if m%}
+                        {{m}}
+                        {%endif%}
+                    {% if form.errors %}
+                        {% for field in form %}
+
+                            {% for error in field.errors %}
+                            {{field.label}}: {{ error|escape }}
+                            {% endfor %}
+
+                        {% endfor %}
+                    {% endif %}
+                    <div class="inputBx"><span>{{ form.username.label_tag }}</span>{{form.username}}</div>
+                    <div class="inputBx"><span>{{ form.email.label_tag }}</span>
+                        {% if error%}
+                        {{error}}
+                    {%endif%}{{form.email}}</div>
+                    
+                    <div class="inputBx"><span>{{ form.mobile.label_tag }}</span>{{form.mobile}}</div>
+                    <div class="inputBx"><span>{{ form.password1.label_tag }}</span>{{form.password1}}</div>
+                    <div class="inputBx"><span>{{ form.password2.label_tag }}</span>{{form.password2}}</div>
+                    <center><div class="g-recaptcha" data-sitekey="6LfMD0kdAAAAAKc31xtgdKU96dgpx6TCwQgUCUmY"></div></center>
+                    <br>
+                    <div class="inputBx">
+                        <input type="submit" value="Sign in">
+                    </div>
+                    
+                    <div class="inputBx">
+                        <p> Already have account? <a href=" {% url 'login' %}">Login</a></p>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</body>
+
+</html>

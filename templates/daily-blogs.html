@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 , maximum-scale=1.0, user-scalable=no">
+    <title>Daily Blogs-Instantcashearn</title>
+    {% load static %}
+    <meta name="propeller" content="039b68891eb7a9d722042fe5922164e3">
+        
+    <link rel = "icon" href = "{% static 'image/download.png'%}"
+        type = "image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/daily.css' %}">
+    
+
+    <!-- swiper slider css file -->
+        <link rel="stylesheet" href="{% static 'css/styleee1.css' %}">
+        <script>(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),p.appendChild(s);})(document.createElement('script'),'https://iclickcdn.com/tag.min.js',4692402,document.body||document.documentElement)</script>
+
+</head>
+
+<body id="twoo">
+
+    <!-- Header -->
+    <header id="header" class="shadow bg-light">
+        <nav class="container navbar">
+            <a href="{%url 'main-view' %}" class="nav-brand text-dark">
+                ICE
+            </a>
+
+            <!-- toggle button -->
+            <button class="toggle-button">
+                <span><i class="fas fa-bars"></i></span>
+            </button>
+
+            <!-- collapse on toggle button click -->
+            <div class="collapse">
+                <ul class="navbar-nav">
+                    <a href="{% url 'main-view' %}" class="nav-link">Home</a>
+                    <a href="{% url 'daily-blogs' %}" class="nav-link">Blog</a>
+                    <!-- <a href="#" class="nav-link">Pages</a> -->
+                    <a href="{% url 'about' %}" class="nav-link">About</a>
+                    <a href="{% url 'contact' %}" class="nav-link">Contact</a>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+    <!-- .Header -->
+    <div class='ali'>
+        <div id="detect"></div>
+        <div class="wrapper">
+            <div class="content">
+                <div class="warn-icon">
+                    <span class="icon"><i class="fas fa-exclamation"></i></span>
+                </div>
+                <h2>AdBlock Detected!</h2>
+                <p>Our website is made possible by displaying ads to our visitors. Please supporting us by
+                    whitelisting our website.</p>
+            </div>
+        </div>
+
+    </div>
+   
+                                   
+    <!-- Main Site -->
+   
+    <div id="gallery" class="container-fluid">
+      {% load static %}
+      <a href="{% url 'gold-blogs' %}"><img src="{% static 'image/gold-paint.jpg' %}" class="img-responsive"><center><h3>What if Earth was made of gold?</h3></center></a>
+      
+      <a href="{% url 'tic-tac' %}"><img src="{% static 'image/sand-clock.jpg' %}" class="img-responsive"><center><h3>Tick, tock, tick, tock</h3></center></a>
+      <a href="{% url 'air-pollution' %}"><img src="{% static 'image/air-pollution.jpg' %}" class="img-responsive"><center><h3>Air pollution – The key to world wide destruction.</h3></center></a>
+      <a href="{% url 'drink-blog' %}"><img src="{% static 'image/Drinking_water.jpg' %}" class="img-responsive"><center><h3>Drink To Much Water Is Bad</h3></center></a>
+      <a href="{% url 'morning-routine' %}"><img src="{% static 'image/morning.jpg' %}" class="img-responsive"><center><h3>4 Minutes To Start Your Day Right</h3></center></a>
+      <center>
+      <iframe data-aa="1855600" src="//ad.a-ads.com/1855600?size=300x250" style="width:300px; height:250px; border:0px; padding:0; overflow:hidden; background-color: transparent;" ></iframe></center>
+     
+      <a href="{% url 'life-ways' %}"><img src="{% static 'image/spiritaul.jpg' %}" class="img-responsive"><center><h3>Facts About Spirituality</h3></center></a>
+      <a href="{%url 'human-blog'%}"><img src="{% static 'image/human-blog.jpg' %}" class="img-responsive"><center><h3>what if humans were twice as intelligent</h3></center> </a>
+      
+
+    {% load static %}
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/adb.js' %}"></script>
+    <!-- <script type='text/javascript' src='//pl16800432.effectivegatetocontent.com/06/e8/e3/06e8e306af9371bb94c4907ec57a31c3.js'></script> -->
+</body>
+
+</html>

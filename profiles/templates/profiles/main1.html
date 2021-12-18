@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Recommendations</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/styleee.css' %}">
+</head>
+
+<body>
+    <section class="contact" id="contact">
+        <header class="header">
+
+            <a href="{% url 'main-view' %}"><div style="border-radius: 50% ;padding: 5px 5px 5px 5px;"><i class="fas fa-arrow-left fa-3x"
+                    ></i></div></a>
+    
+    
+        </header>
+       <br><br><br><br><br><br>
+        <!-- <hr style="border: 1px solid black;"> -->
+        <h1 class="heading"> <span style="color: black;list-style: none;">My Recommendations</span> </h1>
+        <div class="gradient-background"></div>
+        
+            
+
+        {% if my_recs %}
+            <form class="heading" action="" style="font-size: 20px; color: white; ">
+                <h5 class="heading" style="font-size: 20px;"> My direct Recommendations</h5>
+                <ul style="list-style: none;">
+                    {% for p in my_recs %}
+                    <li>{{p.user}}</li>
+                    {% endfor %}
+                </ul>
+            </form>
+
+            <form class="heading" action="" style="font-size: 20px; color: white; ">
+                <h3 class="heading" style="font-size: 20px;">My Indirect Recommendations-1</h3>
+                <ul>
+                    {% for p in my_recs1 %}
+                    <li>{{p.user}}</li>
+                    {% endfor %}
+                </ul>
+            </form>
+
+            <form class="heading" action="" style="font-size: 20px; color: white; ">
+                <h3 class="heading" style="font-size: 20px;">My Indirect Recommendations-2</h3>
+                <ul style="list-style: none;">
+                    {% for p in my_recs2 %}
+                    <li>{{p.user}}</li>
+                    {% endfor %}
+                </ul>
+            </form>
+            <form class="heading" action="" style="font-size: 20px; color: white; ">
+                <h3 class="heading" style="font-size: 20px;">My Indirect Recommendations-3</h3>
+                <ul>
+                    {% for p in my_recs3 %}
+                    <li>{{p.user}}</li>
+                    {% endfor %}
+                </ul>
+            </form>
+            <form class="heading" action="" style="font-size: 20px; color: white; ">
+                <h3 class="heading" style="font-size: 20px;">My Indirect Recommendations-4</h3>
+                <ul style="list-style: none;">
+                    {% for p in my_recs4 %}
+                    <li>{{p.user}}</li>
+                    {% endfor %}
+                </ul>
+            </form>
+            <form class="heading" action="" style="font-size: 20px; color: white; ">
+                <h3 class="heading" style="font-size: 20px;">My Indirect Recommendations-5</h3>
+                <ul style="list-style: none;">
+                    {% for p in my_recs5 %}
+                    <li>{{p.user}}</li>
+                    {% endfor %}
+                </ul>
+            </form>
+            <form class="heading" action="" style="font-size: 20px; color: white; ">
+                <h3 class="heading" style="font-size: 20px;">My Indirect Recommendations-6</h3>
+                <ul style="list-style: none;">
+                    {% for p in my_recs6 %}
+                    <li>{{p.user}}</li>
+                    {% endfor %}
+                </ul>
+            </form>
+            <form class="heading" action="" style="font-size: 20px; color: white; ">
+                <h3 class="heading" style="font-size: 20px;">My Indirect Recommendations-7</h3>
+                <ul style="list-style: none;">
+                    {% for p in my_recs7 %}
+                    <li>{{p.user}}</li>
+                    {% endfor %}
+                </ul>
+            </form>
+            <form class="heading" action="" style="font-size: 20px; color: white; ">
+                <h3 class="heading" style="font-size: 20px;">My Indirect Recommendations-8</h3>
+                <ul style="list-style: none;">
+                    {% for p in my_recs8 %}
+                    <li>{{p.user}}</li>
+                    {% endfor %}
+                </ul>
+            </form>
+            <form class="heading" action="" style="font-size: 20px; color: white; ">
+                <h3 class="heading" style="font-size: 20px;">My Indirect Recommendations-9</h3>
+                <ul style="list-style: none;">
+                    {% for p in my_recs9 %}
+                    <li>{{p.user}}</li>
+                    {% endfor %}
+                </ul>
+            </form>
+           
+        {% else %}
+        <form class="heading" action="" style="font-size: 20px; color: white; ">
+            <h1>You didn't recommend anyone yet...</h1>
+        </form>
+        
+        {% endif %}
+
+
+</body>
+
+</html>

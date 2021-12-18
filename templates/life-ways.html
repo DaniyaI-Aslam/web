@@ -1,0 +1,193 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facts About Spirituality</title>
+    <!-- font awesome icons cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+
+    <!-- swiper slider css file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.css"
+        integrity="sha512-m3pAvNriL711NMlhkZHK6K4Tu2/RjtrzyjxZU8mlAbxxoDoURy27KajN1LGTLeEEPvaN12mKAgSCrYEwF9y0jA=="
+        crossorigin="anonymous" />
+
+    <!-- custom style.css file -->
+    {% load static %}
+    <link rel = "icon" href = "{% static 'image/download.png'%}"
+        type = "image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/daily.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styleee1.css' %}">
+     <!--aaa-->
+ <script>(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),p.appendChild(s);})(document.createElement('script'),'https://iclickcdn.com/tag.min.js',4692402,document.body||document.documentElement)</script>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="header" class="shadow bg-light">
+        <nav class="container navbar">
+            <a href="{%url 'main-view' %}" class="nav-brand text-dark">
+                ICE
+            </a>
+
+            <!-- toggle button -->
+            <button class="toggle-button">
+                <span><i class="fas fa-bars"></i></span>
+            </button>
+
+            <!-- collapse on toggle button click -->
+            <div class="collapse">
+                <ul class="navbar-nav">
+                    <a href="{% url 'main-view' %}" class="nav-link">Home</a>
+                    <a href="{% url 'daily-blogs' %}" class="nav-link">Blog</a>
+                    <!-- <a href="#" class="nav-link">Pages</a> -->
+                    <a href="{% url 'about' %}" class="nav-link">About</a>
+                    <a href="{% url 'contact' %}" class="nav-link">Contact</a>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+    <div class='ali'>
+        <div id="detect"></div>
+        <div class="wrapper">
+            <div class="content">
+                <div class="warn-icon">
+                    <span class="icon"><i class="fas fa-exclamation"></i></span>
+                </div>
+                <h2>AdBlock Detected!</h2>
+                <p>Our website is made possible by displaying ads to our visitors. Please supporting us by
+                    whitelisting our website.</p>
+            </div>
+        </div>
+
+    </div>
+    <!-- .Header -->
+
+    <!-- Main Site -->
+    {% if ads %}
+
+    <main id="site-main">
+
+        <!-- Post Content -->
+        <section class="container">
+            
+            <article id="post">
+                <!-- article heading -->
+                <div class="headings text-center">
+                    <div class="category">
+                        <a href="#" class="nav-link"></a>
+                    </div>
+
+                    <div class="title">
+                        <h2 class="text-title text-dark display-1">Facts About Spirituality</h2>
+                    </div>
+
+
+                </div>
+
+                <!-- thumbnail  -->
+                <div class="thumbnail mt-3">
+                    {% load static %}
+                    <img src="{% static 'image/spiritaul.jpg' %}" class="thumbnail" alt="">
+                </div>
+
+                <!-- content -->
+                <div class="content text-dark display-2 secondary-title mt-3">
+                    <p>Spiritual power is strongly connected to relaxation as only in this state we can be who we really are. To achieve full relaxation, it is very important that we feel at peace with ourselves and with our emotions. The psychological aspect of relaxation is as important is freeing our bodies from tension. The sense of personal identity that is developed helps us to have a balanced life perspective and vital and healthy faith in us. If we believe in ourselves, we can face any difficulties, we can even take advantage of stressful situations by seeing them as opportunities to grow. </p>
+                    <center><img src="{% static 'image/namaste.gif' %}" alt="" height="300px" width="300px"></center>
+                    
+                    <p> The spiritual power is more than just becoming a real psychic. It's about your health and your life. If you practice some of these things regularly, you will increase your self esteem you will find your purpose you will break away from the past that is keeping you from moving forward and you will create a vision of a brilliant future where you are your best self. The only thing you should first know about increasing your spiritual powers is to know what it means when we say spiritual and powers in order to understand spiritual powers means unleashing your real cells full potential and living authentically. In this video, we'll we'll talk about 10 ways you can increase your spiritual power and unleash your full potential. If you incorporate these simple yet powerful techniques into your everyday life, you can be sure that in no time, you will start to feel happier, more relaxed in tune with your higher self and ready to face any challenge. Stay with us until the end of the video and we will also recommend a book that will really help you on your path to spiritual and personal growth. Let's continue with the 10 ways that will help you increase your spiritual power and unleash your maximum potential.</p>
+                    <p> Number one, appreciate yourself. If you don't believe in yourself, and you think that your personal qualities have no value, it will be increasingly difficult for you to relax and grow. Stress arises when your commitment and responsibility exceeds the limits of your ability to overcome them. If you have good confidence and a strong awareness of your abilities, that limit will be expanded. Then you can see pressure as positive as an opportunity to broaden your experience and capacity.</p>
+                    <center><img src="{% static 'image/spiritual-awakening.gif' %}" alt="" height="250px" width="300px"></center>
+                    <p>Number two, restoring perspective. If the same problem recurs and you can't think of other ways to deal with it. Try this visualisation exercise to see it from a new perspective and let it happen. Sit comfortably, breathe deeply several times and close your eyes. Imagine you are a bird that overcomes flight. You are heading towards space flying higher and further away from your human self. Look down on what you see homes, buildings and walks from the air. People appear as small dots that move quickly from one place to another fly even higher. It seems that buildings and trees begin to disappear. Finally, all you can see is the world as a small spinning sphere floating in space. From there try to visualise your problem as if it were a speck of dust on earth just below you. Think about how the wind will take it and carry it away. When you finish exercising slowly exhale and open your eyes. If you need some extra guidance, you can find help online there are many spiritual coaches mentors and psychics that give free consultation calls and not to speak about countless spiritual books and articles you can read for free.</p>
+                    <p>Number three, overcoming fear. For some people overcoming fear is very important to enjoy a more relaxed life. Fear in essence is an internal dimension the emotions we generate in our minds in response to perceptions of danger. Sometimes the danger is real, but sometimes it's just fantasy and effective method for controlling irrational fears is to reduce sensitivity through a slow process gradually increasing your tolerance for fear. </p>
+                    <center><img src="{% static 'image/meditation.gif' %}" alt="" height="250px" width="300px"></center>
+                    <p>Number four, reverse negative internal dialogue. internal dialogue is talking to yourself. Those are the words we use when we talk to ourselves reflecting and creating our emotional state. Negative internal dialogue is usually a mixture of half the truth and irrational thinking, the consequences the restraint of negative emotions, such as pessimism, guilt, fear and anxiety.</p>
+                    <p> Number five living in the present moment. The famous saying teaches us that when one door is closed, the other is open. However, many people remain motionless at closed doors without seeing new opportunities of before their eyes, very often we lose caring for the present and don't enjoy it fully. Start today to divert your energy to live now. Within a few days, you will see that if you act naturally your future will be shaped through real experience.</p>
+                    <p>Try this visualisation exercise to see it from a new perspective and let it happen. Sit comfortably, breathe deeply several times and close your eyes. Imagine you are a bird that overcomes flight. You are heading towards space flying higher and further away from your human self. Look down on what you see homes, buildings and walks from the air. People appear as small dots that move quickly from one place to another fly even higher. It seems that buildings and trees begin to disappear. Finally, all you can see is the world as a small spinning sphere floating in space. From there try to visualise your problem as if it were a speck of dust on earth just below you. Think about how the wind will take it and carry it away. When you finish exercising slowly exhale and open your eyes. If you need some extra guidance, you can find help online there are many spiritual coaches mentors and psychics that give free consultation calls and not to speak about countless spiritual books and articles you can read for free. </p>
+                    <center><img src="{%static 'image/disney-moana.gif'%}" alt=""height="300px" width="300px"></center>
+                </div>
+            </article>
+            <center>
+            <form action="" method="post">{% csrf_token %}
+                <h1 style="font-size: 20px;">00:00</h1>
+                <div class="contai"></div>
+                <p style="font-size: 20px;"></p>
+            </form>
+            <h4>You Have {{rem_adds}} adds remaining</h4>
+            </center>
+        </section>
+    </main>
+
+    {%else%}
+    <main id="site-main">
+
+        <!-- Post Content -->
+        <section class="container">
+            <article id="post">
+                <!-- article heading -->
+                <div class="headings text-center">
+                    <div class="category">
+                        <a href="#" class="nav-link"></a>
+                    </div>
+
+                    <div class="title">
+                        <h2 class="text-title text-dark display-1">Facts About Spirituality</h2>
+                    </div>
+
+
+                </div>
+
+                <!-- thumbnail  -->
+                <div class="thumbnail mt-3">
+                    {% load static %}
+                    <img src="{% static 'image/spiritaul.jpg' %}" class="thumbnail" alt="">
+                </div>
+
+                <!-- content -->
+                <div class="content text-dark display-2 secondary-title mt-3">
+                    <p>Spiritual power is strongly connected to relaxation as only in this state we can be who we really are. To achieve full relaxation, it is very important that we feel at peace with ourselves and with our emotions. The psychological aspect of relaxation is as important is freeing our bodies from tension. The sense of personal identity that is developed helps us to have a balanced life perspective and vital and healthy faith in us. If we believe in ourselves, we can face any difficulties, we can even take advantage of stressful situations by seeing them as opportunities to grow. </p>
+                    <center><img src="{% static 'image/namaste.gif' %}" alt="" height="300px" width="400px"></center>
+                    
+                    <p> The spiritual power is more than just becoming a real psychic. It's about your health and your life. If you practice some of these things regularly, you will increase your self esteem you will find your purpose you will break away from the past that is keeping you from moving forward and you will create a vision of a brilliant future where you are your best self. The only thing you should first know about increasing your spiritual powers is to know what it means when we say spiritual and powers in order to understand spiritual powers means unleashing your real cells full potential and living authentically. In this video, we'll we'll talk about 10 ways you can increase your spiritual power and unleash your full potential. If you incorporate these simple yet powerful techniques into your everyday life, you can be sure that in no time, you will start to feel happier, more relaxed in tune with your higher self and ready to face any challenge. Stay with us until the end of the video and we will also recommend a book that will really help you on your path to spiritual and personal growth. Let's continue with the 10 ways that will help you increase your spiritual power and unleash your maximum potential.</p>
+                    <p> Number one, appreciate yourself. If you don't believe in yourself, and you think that your personal qualities have no value, it will be increasingly difficult for you to relax and grow. Stress arises when your commitment and responsibility exceeds the limits of your ability to overcome them. If you have good confidence and a strong awareness of your abilities, that limit will be expanded. Then you can see pressure as positive as an opportunity to broaden your experience and capacity.</p>
+                    <center><img src="{% static 'image/spiritual-awakening.gif' %}" alt="" height="250px" width="300px"></center>
+                    <p>Number two, restoring perspective. If the same problem recurs and you can't think of other ways to deal with it. Try this visualisation exercise to see it from a new perspective and let it happen. Sit comfortably, breathe deeply several times and close your eyes. Imagine you are a bird that overcomes flight. You are heading towards space flying higher and further away from your human self. Look down on what you see homes, buildings and walks from the air. People appear as small dots that move quickly from one place to another fly even higher. It seems that buildings and trees begin to disappear. Finally, all you can see is the world as a small spinning sphere floating in space. From there try to visualise your problem as if it were a speck of dust on earth just below you. Think about how the wind will take it and carry it away. When you finish exercising slowly exhale and open your eyes. If you need some extra guidance, you can find help online there are many spiritual coaches mentors and psychics that give free consultation calls and not to speak about countless spiritual books and articles you can read for free.</p>
+                    <p>Number three, overcoming fear. For some people overcoming fear is very important to enjoy a more relaxed life. Fear in essence is an internal dimension the emotions we generate in our minds in response to perceptions of danger. Sometimes the danger is real, but sometimes it's just fantasy and effective method for controlling irrational fears is to reduce sensitivity through a slow process gradually increasing your tolerance for fear. </p>
+                    <center><img src="{% static 'image/meditation.gif' %}" alt="" height="250px" width="300px"></center>
+                    <p>Number four, reverse negative internal dialogue. internal dialogue is talking to yourself. Those are the words we use when we talk to ourselves reflecting and creating our emotional state. Negative internal dialogue is usually a mixture of half the truth and irrational thinking, the consequences the restraint of negative emotions, such as pessimism, guilt, fear and anxiety.</p>
+                    <p> Number five living in the present moment. The famous saying teaches us that when one door is closed, the other is open. However, many people remain motionless at closed doors without seeing new opportunities of before their eyes, very often we lose caring for the present and don't enjoy it fully. Start today to divert your energy to live now. Within a few days, you will see that if you act naturally your future will be shaped through real experience.</p>
+                    <p>Try this visualisation exercise to see it from a new perspective and let it happen. Sit comfortably, breathe deeply several times and close your eyes. Imagine you are a bird that overcomes flight. You are heading towards space flying higher and further away from your human self. Look down on what you see homes, buildings and walks from the air. People appear as small dots that move quickly from one place to another fly even higher. It seems that buildings and trees begin to disappear. Finally, all you can see is the world as a small spinning sphere floating in space. From there try to visualise your problem as if it were a speck of dust on earth just below you. Think about how the wind will take it and carry it away. When you finish exercising slowly exhale and open your eyes. If you need some extra guidance, you can find help online there are many spiritual coaches mentors and psychics that give free consultation calls and not to speak about countless spiritual books and articles you can read for free. </p>
+                    <center><img src="{%static 'image/disney-moana.gif'%}" alt=""></center>
+                </div>
+            </article>
+        </section>
+    </main>
+    {%endif%}
+            <!-- masonry libray for horizontal grid -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"
+                integrity="sha512-JRlcvSZAXT8+5SQQAvklXGJuxXTouyq8oIMaYERZQasB8SBDHZaUbeASsJWpk0UUrf89DP3/aefPPrlMR1h1yQ=="
+                crossorigin="anonymous"></script>
+
+            <!-- swiper slider cdn -->
+            {% comment %} <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.js"
+                integrity="sha512-1LlEYE0qExJ/GUfAJ0k2K2fB5sIvMv/q6ueo3syohvQ3ElWDQVSMUOf39cxaDWHtNu7M6lF6ZC1H6A1m3SvheA=="
+                crossorigin="anonymous"></script> {% endcomment %}
+
+            <!-- custom javascript main.js file -->
+            {% load static %}
+            <script src="{% static 'js/main.js' %}"></script>
+            {%load static%}
+            <script src="{% static 'js/newfile.js' %}"></script>
+</body>
+
+</html>

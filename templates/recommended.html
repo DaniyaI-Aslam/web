@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 , maximum-scale=1.0, user-scalable=no">
+    <title>Reffer-Instantcashearn</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    {% load static %}
+    <link rel = "icon" href = "{% static 'image/download.png'%}"
+        type = "image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/styleee1.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styleee.css' %}">
+    <script>(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),p.appendChild(s);})(document.createElement('script'),'https://iclickcdn.com/tag.min.js',4692402,document.body||document.documentElement)</script>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+body{
+  min-height: 100vh;
+  width: 100%;
+  background: #fdfcfc;
+}
+.text-boxes{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 30px;
+  margin-bottom: 60px;
+}
+.text-boxes .text-box{
+  height: 180px;
+  max-width: 660px;
+  width: 100%;
+  margin: 55px 0;
+}
+.text-boxes .text-box .topic{
+  font-size: 18px;
+  font-weight: 600;
+  color: #265df2;
+  margin: 4px;
+}
+.text-boxes .text-box textarea{
+  height: 100%;
+  width: 100%;
+  padding: 30px;
+  font-size: 15px;
+  font-weight: 400;
+  outline: none;
+  border: 1px solid #265df2;
+  border-radius: 8px;
+  background: #e7edfe;
+}
+.text-box textarea::-webkit-scrollbar{
+  display: none;
+}
+.text-boxes .text-box button{
+  height: 45px;
+  width: 155px;
+  color: #fff;
+  background: #265df2;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 400;
+  margin: 8px 0;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.text-boxes .text-box button:hover{
+  background: #0e4bf1;
+}
+@media (max-width: 400px) {
+  .text-boxes .text-box button{
+    width: 100%;
+  }
+}
+</style>
+</head>
+
+<body>
+    <div class="gradient-background"></div>
+    <header class="header">
+
+        <a href="{% url 'main-view' %}">
+            <div style="border-radius: 50% ;padding: 5px 5px 5px 5px;"><i class="fas fa-arrow-left fa-3x"></i></div>
+        </a>
+
+    </header>
+    <br><br><br><br><br><br>
+    <section class="contact" id="contact">
+    <form action="">
+        <div class="text-boxes">
+            <div class="text-box HTMLBox">
+                <div class="topic" style="font-size: 25px;">Your Referral Code:</div>
+                <textarea id="HTMLBox" readonly>
+            https://www.instantcashearn.com/{{re}}
+          </textarea>
+                <button id="HTMLButton">Copy</button>
+            </div>
+        </div>
+    </form></section>
+    <script>
+        let HTMLBox = document.getElementById("HTMLBox");
+        let HTMLButton = document.getElementById("HTMLButton");
+
+        HTMLButton.onclick = function () {
+            HTMLBox.select();
+            document.execCommand("copy");
+            HTMLButton.innerText = "Codes Copied"
+        }
+    </script>
+
+</body>
+
+</html>
